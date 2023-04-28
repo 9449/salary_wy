@@ -1,4 +1,4 @@
-import {add} from "../api/user"
+import {add} from "../../api/user"
 Page({
 
   /**

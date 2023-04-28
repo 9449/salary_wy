@@ -1,5 +1,5 @@
-import {getCurrentUserDetail} from "../api/user"
-import {detailInfos} from "../api/userSalary"
+import {getCurrentUserDetail} from "../../api/user"
+import {detailInfos} from "../../api/userSalary"
 Page({
 
   /**

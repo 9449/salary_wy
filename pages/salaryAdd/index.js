@@ -1,6 +1,6 @@
-import {listType} from "../api/user"
-import {list} from "../api/salaryTemplate"
-import {add} from "../api/userSalary"
+import {listType} from "../../api/user"
+import {list} from "../../api/salaryTemplate"
+import {add} from "../../api/userSalary"
 import dayjs from "dayjs"
 Page({
 

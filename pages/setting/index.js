@@ -1,4 +1,4 @@
-import {list,change} from "../api/salaryTemplate"
+import {list,change} from "../../api/salaryTemplate"
 Page({
 
   /**

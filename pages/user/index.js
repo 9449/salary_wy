@@ -1,4 +1,4 @@
-import {page,deleteUser} from "../api/user"
+import {page,deleteUser} from "../../api/user"
 Page({
 
   /**

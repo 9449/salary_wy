@@ -1,4 +1,4 @@
-import { login } from "../api/user";
+import { login } from "../../api/user";
 Page({
 
   /**

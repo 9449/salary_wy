@@ -1,4 +1,4 @@
-import request from '../../utils/request.js'
+import request from '../utils/request'
 
 export function add(data) {
   return request('/api/user/salary/detail/add',data);

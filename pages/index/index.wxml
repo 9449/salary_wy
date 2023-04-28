@@ -1,0 +1,46 @@
+<view class="indexContainer">
+  <block wx:if="{{!isAdmin}}">
+    <scroll-view class="infos" scroll-y bindscrolltolower="bindDownLoad" wx:if="{{detailInfos.length > 0}}">
+      <view class="salaryItem" wx:for="{{detailInfos}}" wx:key="id">
+        <view class="title">
+          {{item.date}}
+        </view>
+        <view class="content">
+          <view>{{item.realWages}}</view>
+          <view class="small">实发工资</view>
+        </view>
+        <view class="more" bindtap="getDeteial">
+            更多 >
+          </view>
+      </view>
+    </scroll-view>
+    <view wx:else class="tips">暂无数据</view>
+    
+  </block>
+  <block wx:if="{{isAdmin}}">
+    <view class="adminContainer">
+      <view class="top"></view>
+      <view class="bottom">
+        <image class="avatar" src="https://img2.baidu.com/it/u=128570386,4155645694&fm=253&fmt=auto&app=138&f=JPEG?w=564&h=500" />
+        <view class="title">{{userInfo.username}}</view>
+        <view class="menu">
+          <view class="userManagenment" id="/pages/user/index" bindtap="switchMenu">
+            <text class="iconfont icon-renyuanguanli"  ></text>
+            <text>人员管理</text>
+          </view>
+          <view class="salarManagenment" id="/pages/salary/index" bindtap="switchMenu">
+            <text class="iconfont icon-gongzitiao"></text>
+            <text>工资管理</text>
+          </view>
+          <view class="otherManagenment" id="/pages/setting/index" bindtap="switchMenu">
+            <text class="iconfont icon-shezhi"></text>
+            <text>其他设置</text>
+          </view>
+          <view class="notShow">
+            
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

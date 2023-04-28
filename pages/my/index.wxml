@@ -1,0 +1,32 @@
+<view class="userContainer">
+  <view class="userInfo">
+    <image class="avatar" src="https://img2.baidu.com/it/u=128570386,4155645694&fm=253&fmt=auto&app=138&f=JPEG?w=564&h=500" />
+    <view class="username">
+      {{userInfo.username}}
+    </view>
+  </view>
+  <view>
+  </view>
+  <view class="options">
+    <view class="optionItem">
+      <text class="iconfont icon-shezhi"></text>
+      <text >个人设置</text>
+      <text class="detial">></text>
+    </view>
+    <view class="optionItem">
+      <text class="iconfont icon-shiyongwendang"></text>
+      <text >使用文档</text>
+      <text class="detial">></text>
+    </view>
+    <view class="optionItem">
+      <text class="iconfont icon-lianxiwomen"></text>
+      <text >联系我们</text>
+      <text class="detial">></text>
+    </view>
+    <view class="optionItem" bindtap="layout">
+      <text class="iconfont icon-tuichudenglu"></text>
+      <text >退出登录</text>
+      <text class="detial">></text>
+    </view>
+  </view>
+</view>

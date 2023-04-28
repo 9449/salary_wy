@@ -1,0 +1,42 @@
+.userContainer {
+  height: 100%;
+  background: #F5F5F5;
+}
+
+.userContainer .userInfo {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  height: 200rpx;
+  background: #fff;
+}
+
+.userInfo .avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 30rpx;
+}
+
+.userInfo .username {
+  margin-left: 60rpx;
+  font-size: 40rpx;
+}
+
+
+/* 下面的列表 */
+.optionItem {
+  margin: 20rpx 0;
+  padding: 0 30rpx;
+  height: 100rpx;
+  background: #fff;
+  line-height: 100rpx;
+  font-size: 26rpx;
+}
+
+.optionItem .iconfont {
+  margin-right: 20rpx;
+}
+
+.optionItem .detial {
+  float: right;
+}

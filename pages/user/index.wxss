@@ -1,0 +1,138 @@
+.userContainer {
+  background: #fafafa;
+}
+
+.userContainer .searchItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  height: 80rpx;
+  background: #fff;
+}
+
+.searchItem .content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.content input {
+  flex: 1;
+  padding: 0 60rpx;
+  background: #fafafa;
+  border-radius: 50rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.content .icon-sousuoxiao {
+  position: absolute;
+  height: 60rpx;
+  width: 60rpx;
+  font-size: 24rpx;
+  left: 0;
+  text-align: center;
+  line-height: 60rpx;
+}
+.content .icon-qingchu {
+  position: absolute;
+  height: 60rpx;
+  width: 60rpx;
+  font-size: 24rpx;
+  right: 0;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.searchItem .search{
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+
+.add {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 700;
+  background-color: pink;
+  border-radius: 20rpx;
+}
+
+/* 表头 */
+.title {
+  position: relative;
+  display: flex;
+  margin-top: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.title .add {
+  position: absolute;
+  right: 5px;
+  color: rgb(24, 170, 73);
+}
+
+/* 用户信息 */
+.userList {
+  height: calc(100vh - 230rpx);
+}
+
+.userList .userItem {
+  display: flex;
+  margin-bottom: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  font-size: 28rpx;
+}
+.account {
+  width: 180rpx;
+  text-align: center;
+}
+.username {
+  text-align: center;
+  width: 180rpx;
+}
+.password {
+  box-sizing: border-box;
+  width: 200rpx;
+  text-align: center;
+}
+
+.edit {
+  flex: 1;
+  text-align: center;
+}
+.userItem .edit1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit1 view {
+  margin-left: 20rpx;
+  width: 70rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  background: rgb(87, 165, 87);
+  color: #fff;
+}
+.edit1 .delete {
+  background: rgb(201, 55, 55);
+}

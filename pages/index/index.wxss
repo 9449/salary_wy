@@ -1,0 +1,133 @@
+.indexContainer {
+  height: 100%;
+  background: #fafafa;
+}
+
+.indexContainer .salaryItem {
+  position: relative;
+  margin: 20rpx auto;
+  width: 90%;
+  height: 300rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+.infos {
+  height: 100%;
+}
+.tips {
+  margin-top: 20rpx;
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.salaryItem .title {
+  padding: 0 20rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+  color: #fff;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  border-radius: 10rpx 10rpx 0 0;
+  background-color: #9FDFAB;
+}
+
+
+.content view{
+  text-align: center;
+  font-size: 50rpx;
+}
+
+.content .small {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #535151;
+}
+
+.more {
+  position: absolute;
+  width: 100rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  right: 16rpx;
+  bottom: 10rpx;
+  font-size: 32rpx;
+  color: #9FDFAB;
+}
+
+
+/* 管理员样式 */
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.adminContainer .top{
+  width: 100%;
+  height: 300rpx;
+  background-color: #9FDFAB;
+}
+
+.adminContainer .bottom {
+  flex: 1;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fafafa;
+  border-radius: 50rpx 50rpx 0 0 ;
+}
+
+.bottom .avatar {
+  position: absolute;
+  top: -100rpx;
+  left: calc(50% -100rpx);
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.bottom .title {
+  height: 50rpx;
+  margin-top: 130rpx;
+  font-size: 36rpx;
+  line-height: 50rpx;
+}
+
+.bottom .menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600rpx;
+  height: 600rpx;
+  margin: 30rpx auto 0;
+  box-sizing: border-box;
+}
+
+.menu view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 45%;
+  height: 45%;
+  background-color: #9FDFAB;
+  border-radius: 20rpx;
+}
+
+.menu .iconfont {
+  margin-top: 50rpx;
+  font-size: 80rpx;
+}
+.menu text {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+
+.notShow {
+  visibility:hidden;
+}

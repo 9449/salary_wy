@@ -1,0 +1,44 @@
+.settingContainer {
+  height: 100%;
+  background: #eee;
+}
+
+.settingContainer .detailItem {
+  margin: 2rpx 0;
+  background: #fff;
+}
+
+.detailItem .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  height: 100rpx;
+}
+
+.detailItem switch {
+  zoom: .8;
+}
+
+.detailItem .content switch {
+  zoom: .6;
+}
+
+.content {
+  height: 320rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  overflow: hidden;
+  transition: height 1s;
+}
+
+.content .item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  
+}
+
+

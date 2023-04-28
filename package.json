@@ -1,0 +1,10 @@
+{
+  "name": "salary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "dayjs": "^1.11.7"
+  }
+  
+}

@@ -1,0 +1,17 @@
+<view class="settingContainer">
+  <view class="detailItem" wx:for="{{templates}}" wx:key="id">
+    <view class="title">
+      <view>{{item.title}}</view>
+      <view >
+        <switch id="{{item.id}}" checked="{{item.checked}}" wx:if="{{item.type !== 3}}" bindchange="switchChange" />
+        <text wx:else class="iconfont {{isOpen ? 'icon-xialazhankai' : 'icon-zhankai'}}" bindtap="changOpen"></text>
+      </view>
+    </view>
+    <view class="content" wx:if="{{item.type === 3 && item.list}}" style="height:{{isOpen ? '320rpx' : 0}}">
+      <view class="item" wx:for="{{item.list}}" wx:key="id" wx:for-item="sItem" >
+        <text>{{sItem.title}}</text>
+        <switch id="{{sItem.id}}" checked="{{sItem.checked}}" bindchange="switchChange" />
+      </view>
+    </view>
+  </view> 
+</view>

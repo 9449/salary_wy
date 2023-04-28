@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/salaryAdd/index",
+    "pages/salary/index",
+    "pages/setting/index",
+    "pages/userAdd/index",
+    "pages/wageManagement/index",
+    "pages/my/index",
+    "pages/salaryDetail/index",
+    "pages/user/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/image/tabBar/home.png",
+        "selectedIconPath": "/static/image/tabBar/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "/static/image/tabBar/my.png",
+        "selectedIconPath": "/static/image/tabBar/mySelected.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "SALARY",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

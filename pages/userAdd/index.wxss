@@ -1,0 +1,65 @@
+.userAddContainer {
+  height: 100%;
+  background: #fafafa;
+  position: relative;
+}
+
+.userAddContainer .v1 {
+  position: absolute;
+  left: 100rpx;
+  margin-top: 150rpx;
+  width: 545rpx;
+  height: 700rpx;
+}
+
+.v1 .title {
+  margin-bottom: 50rpx;
+  height: 60rpx;
+  width: 545rpx;
+  font-size: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  letter-spacing: 2rpx;
+}
+
+.v1 .input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 545rpx;
+  height: 400rpx;
+}
+
+.v1 .input input {
+  padding: 0 25rpx;
+  height: 90rpx;
+  width: 400rpx;
+  background-color: #fff;
+  margin-top: 10rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+}
+
+.operation {
+  display: flex;
+  align-items: center;
+  margin-top: 70rpx;
+  justify-content: center;
+  width: 100%;
+}
+
+.operation view {
+  margin: 0 auto;
+  width: 200rpx;
+  height: 80rpx;
+  background: #EEE;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+}
+
+.operation .submit {
+  background: skyblue;
+}
+

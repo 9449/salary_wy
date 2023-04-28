@@ -1,0 +1,46 @@
+<view class="salaryAddContainer">
+  <view class="info">
+    <view class="user">
+      <text>人员</text>
+      <view class="select-box">
+        <view class="select-current" catchtap="openClose">
+          <text class="current-name">{{current.account}}</text>
+        </view>
+        <scroll-view scroll-y class="option-list" wx:if="{{isShow}}" catchtap="optionTap">
+          <view class="option"
+            wx:for="{{userList}}"
+            wx:key="id"
+            data-id="{{item.id}}"
+            data-account="{{item.account}}">
+            {{item.account}}
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="date">
+      <view >日期</view>
+      <picker mode="date" value="{{date}}" fields="month" bindchange="bindDateChange">
+        {{date}}
+      </picker>
+    </view>
+    <view class="detailItem" wx:for="{{templates}}" wx:key="id">
+      <view class="title">
+        <view>{{item.title}}</view>
+        <view >
+          <input id="{{item.id}}" wx:if="{{item.type !== 3}}" disabled="{{item.title === '姓名'}}" value="{{(item.title === '姓名' && current.account !== '全部人员') ? current.account : ''}}" bindinput="handleInput" ></input>
+          <text wx:else class="iconfont {{isOpen ? 'icon-xialazhankai' : 'icon-zhankai'}}" bindtap="changOpen"></text>
+        </view>
+      </view>
+      <view class="content" wx:if="{{item.type === 3 && item.list}}" style="height:{{isOpen ? '480rpx' : 0}}">
+        <view class="item" wx:for="{{item.list}}" wx:key="id" wx:for-item="sItem" >
+          <text>{{sItem.title}}</text>
+          <input id="{{sItem.id}}" bindinput="handleInput"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="edit">
+    <button bindtap="cancel">取消</button>
+    <button type="primary" bindtap="confirm">确认</button>
+  </view>
+</view>

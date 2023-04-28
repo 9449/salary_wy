@@ -1,0 +1,14 @@
+<view class="userAddContainer">
+  <view class="v1">
+    <view class="title">添加用户</view>
+    <view class="input">
+      <input type="text" maxlength="6" placeholder="请输入姓名" id="username" bindinput="handleInput" />
+      <input type="text" maxlength="25" placeholder="请输入账号" id="account" bindinput="handleInput" />
+      <input type="number" maxlength="8" placeholder="请输入密码" id="password" bindinput="handleInput" />
+    </view>
+    <view class="operation">
+      <view class="cancel" bindtap="cancel">取消</view>
+      <view class="submit" bindtap="add">确定</view>
+    </view>
+  </view>
+</view>

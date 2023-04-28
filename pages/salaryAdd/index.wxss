@@ -1,0 +1,152 @@
+.salaryAddContainer {
+  padding-bottom: 100rpx;
+}
+.salaryAddContainer .info{
+  background: #eee;
+}
+
+.info .user{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  height: 100rpx;
+  background: #fff;
+}
+
+.select-box {
+  position: relative;
+  width: 240rpx;
+  font-size: 26rpx;
+}
+
+.select-current {
+  position: relative;
+  width: 100%;
+  padding: 0 10rpx;
+  line-height: 68rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+}
+
+.select-current::after {
+  position: absolute;
+  display: block;
+  right: 16rpx;
+  top: 30rpx;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #999;
+}
+
+.current-name {
+  display: block;
+  width: 85%;
+  height: 100%;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+.option-list {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 500rpx;
+  padding: 12rpx 20rpx 10rpx 20rpx;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+  z-index: 99;
+  box-shadow: 0rpx 0rpx 1rpx 1rpx rgba(0, 0, 0, 0.2) inset;
+  background-color: #fff;
+}
+
+.option {
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #eee;
+}
+
+.option:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+
+/* 日期 */
+.info .date {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  justify-content: space-between;
+  margin-top: 2rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+
+/* 选项 */
+.salaryAddContainer .detailItem {
+  margin: 2rpx 0;
+  background: #fff;
+}
+
+.detailItem .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  height: 100rpx;
+}
+
+.title input {
+  background: #eee;
+  width: 200rpx;
+  height: 60rpx;
+  padding: 0 10rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.content {
+  height: 480rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  overflow: hidden;
+  transition: height 1s;
+}
+
+.content .item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+
+.content input {
+  background: #eee;
+  width: 200rpx;
+  height: 60rpx;
+  padding: 0 10rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.edit {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  z-index: 999;
+}
+

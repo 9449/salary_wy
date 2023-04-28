@@ -73,7 +73,7 @@ Page({
   search() {
     this.setData({
       pageNum: 0,
-      pageSize: 6,
+      pageSize: 13,
       total: '',
     })
     this.getUserList();

@@ -123,8 +123,20 @@ Page({
     let res = await add({
       date: this.data.date,
       uid: this.data.current.id,
-      userSalaryDetail: JSON.stringify(this.data.userSalaryDetail)
+      userSalaryDetail: JSON.stringify(this.data.userSalaryDetail),
+      account: this.data.account
     })
+    if(res.code === 0) {
+      wx.showToast({
+        title: '添加成功',
+        icon: "success",
+        success: () => {
+          // 跳转回上一页 
+          wx.navigateBack();
+        }
+      })
+      
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

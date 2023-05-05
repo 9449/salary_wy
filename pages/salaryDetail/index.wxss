@@ -1,36 +1,66 @@
 .detailContainer {
-  padding: 30rpx 0 80rpx;
-  background: #F5F5F5;
+  padding-bottom: 100rpx;
 }
 
+
+/* 选项 */
 .detailContainer .detailItem {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30rpx;
-  height: 100rpx;
-  padding: 0 40rpx;
+  margin: 2rpx 0;
   background: #fff;
-  line-height: 100rpx;
-  font-size: 28rpx;
 }
 
+.detailItem .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  height: 100rpx;
+}
 
-.ts {
-  height: 320rpx;
+.title input {
+  background: #eee;
+  width: 200rpx;
+  height: 60rpx;
+  padding: 0 10rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.content {
+  height: 480rpx;
   background: #fff;
-  margin: -30rpx 0 30rpx;
-  padding: 0 60rpx;
+  padding: 0 30rpx;
   overflow: hidden;
   transition: height 1s;
 }
 
-.ts .item {
+.content .item {
   display: flex;
   justify-content: space-between;
-  font-size: 26rpx;
-  height: 50rpx;
-  line-height: 50rpx;
-  
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
 }
 
+
+.content input {
+  background: #eee;
+  width: 200rpx;
+  height: 60rpx;
+  padding: 0 10rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.edit {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  z-index: 999;
+}
 

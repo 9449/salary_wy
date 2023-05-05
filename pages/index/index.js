@@ -32,16 +32,20 @@ Page({
         }
       })
     }
-    this.getCurrentUserDetail();
+    if (Authorization) {
+      this.getCurrentUserDetail();
+    }
   },
 
   // 获取当前登陆人员信息
   async getCurrentUserDetail(){
     let result = await getCurrentUserDetail();
-    this.setData({
-      isAdmin: (result.data.type === 1),
-      userInfo: result.data
-    });
+    if(result.code === 0 ){
+      this.setData({
+        isAdmin: (result.data.type === 1),
+        userInfo: result.data
+      });
+    }
     wx.setStorageSync("userInfo",this.data.userInfo);
     if(!this.data.isAdmin) {
       this.detailInfos();
@@ -62,7 +66,6 @@ Page({
         total: res.data.total,
         pageNum: ++this.data.pageNum
       })
-      
     }
   },
 
@@ -82,7 +85,7 @@ Page({
   // 跳转到详情页面
   getDeteial(event) {
     wx.navigateTo({
-      url: '/pages/salaryDetail/index'
+      url: '/pages/salaryDetail/index?id=' + event.currentTarget.id + "&date=" + event.currentTarget.dataset.date
     })
   },
 

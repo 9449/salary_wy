@@ -1,44 +1,17 @@
 <view class="detailContainer">
-  <view >
-    <view class="detailItem" bindtap="changOpen">
-      <text> 基本工资</text>
-      <text class="iconfont {{isOpen ? 'icon-xialazhankai' : 'icon-zhankai'}}"></text>
-    </view>
-    <view class="ts" style="height:{{isOpen ? '' : 0}}">
-      <view class="item">
-        <text>类别</text>
-        <text>外包</text>
-      </view>
-      <view class="item">
-        <text>出勤(天)</text>
-        <text>23</text>
-      </view>
-      <view class="item">
-        <text>请假(天)</text>
-        <text>0</text>
-      </view>
-      <view class="item">
-        <text>休息(天)</text>
-        <text>0</text>
-      </view>
-      <view class="item">
-        <text>日薪(元)</text>
-        <text>300</text>
-      </view>
-      <view class="item">
-        <text>考勤工资(元)</text>
-        <text>300</text>
+  <view class="detailItem" wx:for="{{salaryItems}}" wx:key="id">
+    <view class="title">
+      <view>{{item.title}}</view>
+      <view >
+        <input disabled wx:if="{{item.type !== 3}}" value="{{item.content}}" ></input>
+        <text wx:else class="iconfont {{isOpen ? 'icon-xialazhankai' : 'icon-zhankai'}}" bindtap="changOpen"></text>
       </view>
     </view>
-  </view>
-  <view class="detailItem" wx:for="{{salaryItems}}" wx:key="title" >
-    <view>
-      <text class="title">{{item.title}}</text>
-      <text wx:if="{{item.type === 1}}">+</text>
-      <text wx:elif="{{item.type === 2}}">+</text>
-    </view>
-    <view>
-      <text class="content">{{item.content}}</text>
+    <view class="content" wx:if="{{item.type === 3 && item.list}}" style="height:{{isOpen ? (80 * item.list.length + 'rpx') : 0}}">
+      <view class="item" wx:for="{{item.list}}" wx:key="id" wx:for-item="sItem" >
+        <text>{{sItem.title}}</text>
+        <input disabled value="{{sItem.content}}" ></input>
+      </view>
     </view>
   </view>
 </view>

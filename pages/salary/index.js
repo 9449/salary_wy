@@ -1,24 +1,114 @@
-// pages/salary/index.js
+import {detailInfos} from "../../api/userSalary"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    key: '',
+    pageNum: 1,
+    pageSize: 15,
+    total: 0,
+    detailInfos: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.detailInfos();
   },
 
   add(){
     wx.navigateTo({
       url: '/pages/salaryAdd/index'
     })
+  },
+
+  
+  // 用户输入事件 
+  handleInput(event) {
+    this.setData({
+      key: event.detail.value
+    })
+  },
+
+  // 清除输入
+  deleteKey() {
+    this.setData({
+      key: '',
+      pageNum: 1,
+      pageSize: 15,
+      total: 0,
+      detailInfos: [],
+    })
+    this.detailInfos();
+  },
+
+  // 文件上传
+  chooseUpload() {
+    wx.chooseMessageFile({
+      count: 1,
+      type: 'file',
+      extension: ['.xlsx', '.xls', '.XLSX', '.XLS', 'xlsx', 'xls', 'XLSX', 'XLS'],
+      success(res) {
+        console.log(res);
+        wx.uploadFile({
+          url: 'http://nas.xuperpark.com:8080/file/upload',
+          filePath: res.tempFiles[0].path,
+          name: 'file',
+          formData: {
+            'name': res.tempFiles[0].name
+          },
+          success: function(resp) {
+            console.log(resp);
+          },
+          fail: function(err) {
+            console.log(err);
+          }
+        })
+      },
+    })
+  },
+  // 获取添加列表
+  async detailInfos() {
+    let res = await detailInfos({
+      pageNum: this.data.pageNum,
+      pageSize: this.data.pageSize,
+      key:this.data.key
+    })
+    if(res.code === 0){
+      let detailInfos = [...this.data.detailInfos,...res.data.records];
+      this.setData({
+        total: res.data.total,
+        pageNum: ++this.data.pageNum,
+        detailInfos
+      })
+    }
+  },
+
+
+  // 触底 需要获取下一页
+  bindDownLoad() {
+    if(this.data.total > ((this.data.pageNum -1) * this.data.pageSize)) {
+      this.detailInfos();
+    } else {
+      wx.showToast({
+        title: "没有更多了",
+        icon: "none"
+      })
+    }
+  },
+
+  // 搜索
+  search() {
+    this.setData({
+      pageNum: 1,
+      pageSize: 15,
+      total: 0,
+      detailInfos: [],
+    })
+    this.detailInfos();
   },
 
   /**

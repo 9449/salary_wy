@@ -1,3 +1,32 @@
 <view class="salaryContainer">
-  <button class="add" type="primary" bindtap="add">新增</button>
+  <view class="operation">
+    <view class="edit">
+      <view class="add" bindtap="add">添加</view>
+      <view class="daoru" bindtap="chooseUpload">导入</view>
+    </view>
+     <!-- 搜索 -->
+    <view class="searchItem" >
+      <view class="content">
+        <text class="iconfont icon-sousuoxiao"></text>
+        <input type="text" value="{{key}}" placeholder="请输入账号" bindinput="handleInput"/>
+        <text wx:if="{{key.length > 0}}" bindtap="deleteKey" class="iconfont icon-qingchu"></text>
+      </view>
+      <text class="search" bindtap="search" >搜索</text>
+    </view>
+  </view>
+  <view class="history">
+    <view class="headers">
+      <view>账号</view>
+      <view>时间</view>
+      <view>实发工资</view>
+    </view>
+    <scroll-view class="infos" bindscrolltolower="bindDownLoad"	scroll-y  wx:if="{{detailInfos.length > 0}}" >
+      <view class="infoItem" wx:for="{{detailInfos}}" wx:key="id">
+        <view>{{item.account}}</view>
+        <view>{{item.date}}</view>
+        <view>{{item.realWages}}</view>
+      </view>
+    </scroll-view>
+    <view wx:else class="tips">暂无数据</view>
+  </view>
 </view>

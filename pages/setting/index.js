@@ -24,7 +24,8 @@ Page({
 
   switchChange(event) {
     change({
-      id: event.currentTarget.id
+      id: event.currentTarget.id,
+      checked: event.detail.value
     });
   },
   async list() {

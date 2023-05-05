@@ -1,83 +1,12 @@
-// pages/salaryDetail/index.js
+import dayjs from "dayjs"
+import {detailMonth} from "../../api/userSalary"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    salaryItems: [
-      {
-        "title": "姓名",
-        "content": "张三",
-        "type": 0
-      },
-      {
-        "title": "基本工资",
-        "content": "张三",
-        "type": 0
-      },
-    
-      {
-      "title": "基本工资总额",
-      "content": "7000",
-      "type": 0
-      },
-      {
-      "title": "绩效",
-      "content": "",
-      "type": 1
-      },
-      {
-      "title": "带看车补",
-      "content": "",
-      "type": 1
-      },
-      {
-      "title": "公车补贴",
-      "content": "300",
-      "type": 1
-      },
-      {
-      "title": "社保",
-      "content": "684.6",
-      "type": 2
-      },
-      {
-      "title": "考核项",
-      "content": "",
-      "type": 2
-      },
-      {
-      "title": "考勤类",
-      "content": "251.85",
-      "type": 2
-      },
-      {
-      "title": "个税",
-      "content": "",
-      "type": 2
-      },
-      {
-      "title": "税收",
-      "content": "",
-      "type": 2
-      },
-      {
-      "title": "税前工资",
-      "content": "6363.55",
-      "type": 0
-      },
-      {
-        "title": "税后工资",
-        "content": "6363.55",
-        "type": 0
-        },
-        {
-          "title": "本月实发",
-          "content": "6363.55",
-          "type": 0
-          },
-  ],
+    salaryItems: [],
     isOpen: false
   },
 
@@ -85,7 +14,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    // 修改标题
+    let title = dayjs(options.date).format("YYYY年MM月") + "工资条";
+    wx.setNavigationBarTitle({
+      title
+    })
+    // 获取数据
+    this.detailMonth(options.id);
   },
   changOpen() {
     let isOpen = !this.data.isOpen;
@@ -93,6 +28,19 @@ Page({
       isOpen
     })
   },
+  // 获取用户工资表详情
+  async detailMonth(id) {
+    let res = await detailMonth({
+      id
+    })
+    if (res.code === 0) {
+      this.setData({
+        salaryItems: res.data
+      })
+    }
+  },
+
+  // 获取人员的信息
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -9,7 +9,7 @@
           <view>{{item.realWages}}</view>
           <view class="small">实发工资</view>
         </view>
-        <view class="more" bindtap="getDeteial">
+        <view class="more" bindtap="getDeteial"  id="{{item.id}}" data-date="{{item.date}}">
             更多 >
           </view>
       </view>

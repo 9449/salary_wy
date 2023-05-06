@@ -23,7 +23,7 @@
     <text class="username">{{item.username}}</text>
     <text class="password">{{item.password}}</text>
     <view class="edit1">
-      <view class="delete" id="{{item.id}}" bindtap="delete">删除</view>
+      <view wx:if="{{item.type===1}}" class="delete" id="{{item.id}}" bindtap="delete">删除</view>
     </view>
   </view>
  </scroll-view>

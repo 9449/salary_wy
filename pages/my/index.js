@@ -56,6 +56,12 @@ Page({
   onHide() {
 
   },
+  more() {
+    wx.showToast({
+      title: "攻城狮正在开发中~~~~请您耐心等待~~~~~",
+      icon:"none"
+    })
+  },
 
   /**
    * 生命周期函数--监听页面卸载

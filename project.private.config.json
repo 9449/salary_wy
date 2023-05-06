@@ -3,6 +3,6 @@
   "projectname": "salary_wy",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
+    "urlCheck": true
   }
 }

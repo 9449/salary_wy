@@ -8,17 +8,17 @@
   <view>
   </view>
   <view class="options">
-    <view class="optionItem">
+    <view class="optionItem" bindtap="more">
       <text class="iconfont icon-shezhi"></text>
       <text >个人设置</text>
       <text class="detial">></text>
     </view>
-    <view class="optionItem">
+    <view class="optionItem" bindtap="more">
       <text class="iconfont icon-shiyongwendang"></text>
       <text >使用文档</text>
       <text class="detial">></text>
     </view>
-    <view class="optionItem">
+    <view class="optionItem" bindtap="more">
       <text class="iconfont icon-lianxiwomen"></text>
       <text >联系我们</text>
       <text class="detial">></text>

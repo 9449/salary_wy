@@ -47,21 +47,43 @@ Page({
 
   // 文件上传
   chooseUpload() {
+    let that = this;
     wx.chooseMessageFile({
       count: 1,
       type: 'file',
       extension: ['.xlsx', '.xls', '.XLSX', '.XLS', 'xlsx', 'xls', 'XLSX', 'XLS'],
       success(res) {
-        console.log(res);
         wx.uploadFile({
-          url: 'http://nas.xuperpark.com:8080/file/upload',
+          url: 'https://router.xuperpark.com/file/upload',
           filePath: res.tempFiles[0].path,
           name: 'file',
-          formData: {
-            'name': res.tempFiles[0].name
-          },
+          // formData: {
+          //   'name': res.tempFiles[0].name
+          // },
           success: function(resp) {
-            console.log(resp);
+            
+            let data = JSON.parse(resp.data);
+            if(data.code === 0) {
+              wx.showToast({
+                title: "导入成功",
+                icon: "success",
+                success: function() {
+                  that.setData({
+                    pageNum: 1,
+                    pageSize: 15,
+                    total: 0,
+                    detailInfos: [],
+                  })
+                  that.detailInfos();
+                }
+              })
+            } else {
+              wx.showToast({
+                title: data.msg,
+                icon: "error"
+              })
+            }
+            
           },
           fail: function(err) {
             console.log(err);

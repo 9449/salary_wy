@@ -1,4 +1,3 @@
-import dayjs from "dayjs"
 import {detailMonth} from "../../api/userSalary"
 Page({
 
@@ -15,9 +14,8 @@ Page({
    */
   onLoad(options) {
     // 修改标题
-    let title = dayjs(options.date).format("YYYY年MM月") + "工资条";
     wx.setNavigationBarTitle({
-      title
+      title: options.date + "工资条"
     })
     // 获取数据
     this.detailMonth(options.id);

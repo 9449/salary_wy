@@ -7,7 +7,7 @@ Page({
   data: {
     key: '',
     pageNum: 1,
-    pageSize: 15,
+    pageSize: 20,
     total: 0,
     detailInfos: [],
   },
@@ -38,7 +38,7 @@ Page({
     this.setData({
       key: '',
       pageNum: 1,
-      pageSize: 15,
+      pageSize: 20,
       total: 0,
       detailInfos: [],
     })
@@ -70,7 +70,7 @@ Page({
                 success: function() {
                   that.setData({
                     pageNum: 1,
-                    pageSize: 15,
+                    pageSize: 20,
                     total: 0,
                     detailInfos: [],
                   })
@@ -126,7 +126,7 @@ Page({
   search() {
     this.setData({
       pageNum: 1,
-      pageSize: 15,
+      pageSize: 20,
       total: 0,
       detailInfos: [],
     })

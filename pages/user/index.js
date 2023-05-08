@@ -7,7 +7,7 @@ Page({
   data: {
     key: "",
     pageNum: 0,
-    pageSize: 13,
+    pageSize: 20,
     total: '',
     userList: [],
 
@@ -23,7 +23,7 @@ Page({
     if (this.data.pageSize < this.data.total) {
       let pageSize = this.data.pageSize
       this.setData({
-        pageSize: pageSize + 6
+        pageSize: pageSize + 20
       })
       this.getUserList()
     } else {
@@ -73,7 +73,7 @@ Page({
   search() {
     this.setData({
       pageNum: 0,
-      pageSize: 13,
+      pageSize: 20,
       total: '',
     })
     this.getUserList();
